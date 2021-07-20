@@ -9,4 +9,5 @@ def get_games():
     data = pd.read_json("https://www.gamerpower.com/api/giveaways?platform=pc")
     games = data[["title", "description", "instructions", "open_giveaway", "worth", "end_date",]]
     games.to_csv("games.csv")
-
+    
+get_games()
